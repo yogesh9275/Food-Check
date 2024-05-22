@@ -193,7 +193,7 @@ function checkIngredient() {
   }
 }
 
-const apiKey = "bO26Fq6gUgEdm6DhrPTKCmLBiG4vWAe20OcNguS5"; // Replace with your USDA API key
+const apiKey = ""; // Replace with your USDA API key
 
 async function fetchNutritionData() {
   const foodItem = document.getElementById("items").value.trim();
