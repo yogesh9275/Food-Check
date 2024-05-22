@@ -1,0 +1,66 @@
+function check(){
+    var item = document.getElementById('items').value;
+    console.log(item);
+    data = {
+        item: item
+    };
+    sendData(data, 3);
+}
+
+function sendData(data, retryCount) {
+    const csrftoken = getCookie('csrftoken');
+    $.ajax({
+        url: '/data/', // Update with your URL
+        type: 'POST',
+        headers: {
+            'X-CSRFToken': csrftoken
+        },
+        contentType: 'application/json',
+        data: JSON.stringify(data),
+        success: function(response) {
+            console.log("Ingredients list sent successfully.");
+            setTimeout(function() {
+                // Render the response or perform any action here
+                console.log("Rendering the response to the user after 5 seconds.");
+            }, 10000);
+            if (response.success == true) {
+                console.log("Data retrieved successfully.");
+                // Process the response here
+                console.log(response.data);
+            } else {
+                console.log("Data is not retrieved.");
+            }
+        },
+        error: function(xhr, status, error) {
+            console.log("Error: Can't send data");
+            console.error('Error:', error);
+            // Retry the request if retryCount is greater than 0
+            if (retryCount > 0) {
+                console.log("Retrying in 30 seconds...");
+                setTimeout(function() {
+                    sendData(data, retryCount - 1);
+                }, 3000); // 30000 milliseconds = 30 seconds
+            } else {
+                console.log("Max retries reached. Unable to send data.");
+            }
+        }
+    });
+}
+
+// Function to get CSRF token from cookie
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+

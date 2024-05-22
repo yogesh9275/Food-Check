@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Checker</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/check.css' %}?v={{ timestamp }}"
+    />
+    {% comment %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'Image/background-image.jpg' %}?v={{ timestamp }}"
+    />
+    {% endcomment %}
+  </head>
+  <body>
+    <h2 class="food_title">Food Checker</h2>
+    <div class="container">
+      <form id="CheckForm">
+        {% csrf_token %}
+        <div class="Ingingredients">
+          <label for="items" class="Ingingredient_label">Ingingredients:</label>
+          <label for="items" class="input_label"
+            >Enter Ingingredient name:</label
+          >
+          <input id="items" type="text" />
+          <button class="check" type="button" onclick="check()">Check</button>
+        </div>
+      </form>
+      <div class="Results">
+        <label class="Result_label">Checked Results:</label>
+        <div id="result">
+          <p></p>
+          <br />
+        </div>
+        <div id="food">
+          <p></p>
+          <br />
+        </div>
+        <div id="nutritionTable"></div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'js/check_script.js' %}?v={{ version }}"></script>
+  </body>
+</html>
