@@ -1,32 +1,4 @@
 
-"""
-def google_search(query, api_key, cse_id, site=None, num=1):
-    url = "https://www.googleapis.com/customsearch/v1"
-    params = {
-        'q': query,
-        'key': api_key,
-        'cx': cse_id,
-        'num': num
-    }
-    if site:
-        params['q'] = f"{query} site:{site}"
-    response = requests.get(url, params=params)
-    return response.json()
-"""
-
-"""
-    # api_key = "AIzaSyDLmeM3I4BBs_QFEoV2uCmLbAUdAIl2mQ4"
-    # cse_id = "d4df1890c086642be"
-    # query = "Flour"
-
-    # Perform the search
-    # results = google_search(query, api_key, cse_id, site="wikipedia.org")
-    
-    # Check if there are results from Wikipedia
-    # page_title = 'Flour'
-    # paragraph = get_wikipedia_paragraph(page_title)
-    # logger.info(paragraph)
-    """
 import json
 import logging
 import time
