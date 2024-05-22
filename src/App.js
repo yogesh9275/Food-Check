@@ -211,7 +211,7 @@ function App() {
       return false; // Return false when foodItem is not provided
     }
 
-    const apiKey = "bO26Fq6gUgEdm6DhrPTKCmLBiG4vWAe20OcNguS5"; // Replace with your USDA API key
+    const apiKey = ""; // Replace with your USDA API key
     const apiUrl = `https://api.nal.usda.gov/fdc/v1/foods/search?query=${foodItem}&api_key=${apiKey}`;
 
     try {
