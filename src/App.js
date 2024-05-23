@@ -31,7 +31,7 @@ function App() {
   };
 
   const searchImage = async (query) => {
-    const apiKey = "ES3CC6Y2iV_fNOVOJE6JSBGFrVVZZqzEY2nVUzkFpJc";
+    const apiKey = "";
     const URL = `https://api.unsplash.com/search/photos?page=1&query=${query}&client_id=${apiKey}`;
 
     try {
@@ -243,7 +243,7 @@ function App() {
       return false; // Return false when foodItem is not provided
     }
 
-    const apiKey = "bO26Fq6gUgEdm6DhrPTKCmLBiG4vWAe20OcNguS5"; // Replace with your USDA API key
+    const apiKey = ""; // Replace with your USDA API key
     const apiUrl = `https://api.nal.usda.gov/fdc/v1/foods/search?query=${foodItem}&api_key=${apiKey}`;
 
     try {
@@ -293,23 +293,6 @@ function App() {
     setNutritionTable(tableHtml);
     return true; // Return true if nutrition data is successfully displayed
   };
-
-  /*
-  const getCookie = (name) => {
-    let cookieValue = null;
-    if (document.cookie && document.cookie !== "") {
-      const cookies = document.cookie.split(";");
-      for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].trim();
-        if (cookie.substring(0, name.length + 1) === name + "=") {
-          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-          break;
-        }
-      }
-    }
-    return cookieValue;
-  };
-*/
   return (
     <div className="container">
       <form id="CheckForm" onSubmit={(e) => e.preventDefault()}>
