@@ -63,7 +63,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Below is the Output of the project run:
+![Food check-1](https://github.com/yogesh9275/Food-Check/assets/52611925/df1a76ae-032c-4654-868c-7eadc8504b07)
+![Food check-2](https://github.com/yogesh9275/Food-Check/assets/52611925/9628d6a2-1a69-4381-9604-6b5ff05eecff)
+
 
 ### `npm run build` fails to minify
 
