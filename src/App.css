@@ -1,0 +1,206 @@
+@import url(https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap);
+
+.body {
+  font-family: "Wix Madefor Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  background-color: #393E46;
+}
+
+.container {
+  position: relative;
+  font-weight: 400;
+  font-style: normal;
+}
+
+form {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.food_title {
+  text-align: center;
+
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+}
+
+.Ingingredients {
+
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  position: relative;
+  padding: 20px;
+  margin: 20px;
+  height: 150px;
+  width: 800px;
+  background-color: #F7F7F7;
+  border-radius: 25px;
+}
+
+.Results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  min-height: 10px;
+  max-width: 1094px;
+  /* Change width to max-width */
+  background-color: #F7F7F7;
+  padding: 20px;
+  margin: 20px auto;
+  /* Change margin to center horizontally */
+  border-radius: 25px;
+}
+
+
+.image {
+  top: 20px;
+  max-width: fit-content;
+  height: fit-content;
+  margin: 50px 20px 10px 10px;
+  /* Ensures no extra space on the left */
+  float: left;
+}
+
+.box {
+  border: 3px solid #393E46;
+  border-radius: 25px;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.result_data {
+  display: flex;
+}
+
+input {
+  font-family: 'Anonymous Pro';
+  font-weight: 400;
+  font-style: normal;
+  outline: 0;
+  border-width: 0 0 0px;
+  border-color: #393E46;
+  background-color: inherit;
+  text-align: center;
+  position: relative;
+  width: 300px;
+  line-height: 4ex;
+  font-size: 25px;
+
+}
+
+.input_label {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
+.Ingingredient_label {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  padding: 0 10px;
+  font-weight: bold;
+  mix-blend-mode: multiply;
+  color: transparent;
+  /* Make text transparent */
+  -webkit-text-stroke: 1px #F7F7F7;
+  /* Add stroke for better visibility */
+  background-color: #393E46;
+  /* Background image */
+  -webkit-background-clip: text;
+  /* Clip background to text */
+  background-clip: text;
+  font-size: 40px;
+}
+
+p {
+
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  margin: 10px 10px 10px;
+  text-align: justify;
+}
+
+.Result_label {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  padding: 0 10px;
+  font-weight: bold;
+  mix-blend-mode: multiply;
+  color: transparent;
+  /* Make text transparent */
+  -webkit-text-stroke: 1px #F7F7F7;
+  /* Add stroke for better visibility */
+  background-color: #393E46;
+  /* Background image */
+  -webkit-background-clip: text;
+  /* Clip background to text */
+  background-clip: text;
+  font-size: 40px;
+}
+
+#result {
+  margin-top: 40px;
+}
+
+#food {
+  align-self: center;
+  font-size: 30px;
+}
+
+.check {
+  background-color: #393E46;
+  color: #F7F7F7;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 1px;
+  transition: #F7F7F7 0.3s, #393E46 0.3s;
+  border-radius: 25px;
+}
+
+.check::after {
+  background-color: #F7F7F7;
+  color: #393E46;
+}
+
+.nutritionTable {
+  display: inherit;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  align-self: left;
+}
+
+th,
+td {
+  padding: 8px 12px;
+  border: 1px solid #0b0b0b;
+  font-size: 20px;
+}
+
+th {
+  background-color: #0d0d0d;
+  color: #F7F7F7;
+}
